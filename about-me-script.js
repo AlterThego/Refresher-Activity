@@ -32,9 +32,9 @@ const data = [
             <p class="text-green-500 font-bold">ready for access. </p>
             >> database\\U2FsdGVkX19/+CTHVXZa+qkPvgMB9GgZ\\Skills: [<br> 
             --programming-languages: JavaScript, PHP, HTML, CSS, SAP ABAP<br> 
-            --frameworks-Libraries: Laravel, Node.js<br> 
+            --frameworks-Libraries: Laravel, Node.js, Tailwind.css<br> 
             --databases: MySQL, SQLite<br> 
-            --tools: Git, Visual Studio Code, Github, Composer<br> 
+            --tools: Git, Visual Studio Code, Github<br> 
             --soft-skills: Problem-solving, Critical Thinking, Communication<br> 
             <p class="text-green-600 text-center font-bold">Data compilation successful.</p> ]`
     },

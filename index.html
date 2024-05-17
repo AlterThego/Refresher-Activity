@@ -14,7 +14,23 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'primary-bg': "url('cyberpunk.jpg')",
+                    }
+                }
+            }
+        }
+    </script> -->
+
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
+
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
 </head>
 
 <body>
@@ -52,7 +68,7 @@
         <div class="grid grid-cols-3 h-screen">
 
             <!-- First Section -->
-            <div class="col-span-1 p-8">
+            <div class="col-span-3 lg:col-span-1 p-8">
                 <h2 class="main-aug text-xl text-[--primary-cyan] mb-4 px-10 py-2.5"
                     data-augmented-ui="tr-2-clip-x bl-clip border">
                     About Me
@@ -60,22 +76,23 @@
                 <p class="border-[--primary-yellow] border-b-4 mb-5"></p>
                 <div class="grid grid-cols-4 items-center justify-between space-x-3 mb-6">
                     <button data-section="education" data-augmented-ui="br-clip border"
-                        class="btn border border-[--primary-red] rounded-none bg-black section-1-aug bg-opacity-10 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-[--primary-cyan] focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-[--primary-cyan] focus:ring-cyan-900 focus:outline:none text-center">
-                        <p class="hidden font-medium lg:inline-block text-md lg:text-sm">Education</p>
+                        class="btn border border-[--primary-red] rounded-none section-1-aug bg-opacity-20 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-cyan-400 focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-cyan-400 focus:ring-cyan-900 focus:outline-none">
+                        <p class="font-medium text-md lg:text-sm">Education</p>
                     </button>
                     <button data-section="experience" data-augmented-ui="br-clip border"
-                        class="btn border border-[--primary-red] rounded-none bg-black section-1-aug bg-opacity-10 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-[--primary-cyan] focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-[--primary-cyan] focus:ring-cyan-900 focus:outline:none text-center">
-                        <p class="hidden font-medium lg:inline-block text-md lg:text-sm">Experience</p>
+                        class="btn border border-[--primary-red] rounded-none section-1-aug bg-opacity-20 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-cyan-400 focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-cyan-400 focus:ring-cyan-900 focus:outline-none">
+                        <p class="font-medium text-md lg:text-sm">Experience</p>
                     </button>
                     <button data-section="skills" data-augmented-ui="br-clip border"
-                        class="btn border border-[--primary-red] rounded-none bg-black section-1-aug bg-opacity-10 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-[--primary-cyan] focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-[--primary-cyan] focus:ring-cyan-900 focus:outline:none text-center">
-                        <p class="hidden font-medium lg:inline-block text-md lg:text-sm">Skills</p>
+                        class="btn border border-[--primary-red] rounded-none section-1-aug bg-opacity-20 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-cyan-400 focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-cyan-400 focus:ring-cyan-900 focus:outline-none">
+                        <p class="font-medium  text-md lg:text-sm">Skills</p>
                     </button>
                     <button data-section="projects" data-augmented-ui="br-clip border"
-                        class="btn border border-[--primary-red] rounded-none bg-black section-1-aug bg-opacity-10 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-[--primary-cyan] focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-[--primary-cyan] focus:ring-cyan-900 focus:outline:none text-center">
-                        <p class="hidden font-medium lg:inline-block text-md lg:text-sm">Projects</p>
+                        class="btn border border-[--primary-red] rounded-none section-1-aug bg-opacity-20 text-[--primary-red] transition-all duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:text-cyan-400 focus:text-cyan-400 focus:bg-cyan-400 focus:bg-opacity-10 focus:border focus:border-cyan-400 focus:ring-cyan-900 focus:outline-none">
+                        <p class="font-medium text-md lg:text-sm">Projects</p>
                     </button>
                 </div>
+
                 <div class="code-container p-5" data-augmented-ui="tl-clip tr-clip-y br-2-clip-xy both">
                     <div class="flex flex-grow inline-block space-x-3">
                         <span class="bg-gray-300 font-medium text-black px-2" data-augmented-ui="">
@@ -95,22 +112,28 @@
                     </div>
 
                 </div>
-                
+
             </div>
 
             <!-- Second Section -->
-            <div class="col-span-1 p-8">
-                <h2 class="main-aug text-xl text-center text-[--primary-cyan] mb-4 py-2.5" data-augmented-ui="
-                    br-2-clip-x bl-2-clip-x border">
-                    Overview
+            <div class="col-span-3 lg:col-span-1 p-8">
+                <h2 class="main-aug text-xl text-center text-[--primary-cyan] mb-4 py-2.5"
+                    data-augmented-ui="br-2-clip-x bl-2-clip-x border">
+                    Avatar
                 </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec quam
-                    ullamcorper, at
-                    suscipit elit pharetra.</p>
+                <div class="custom-model-viewer" data-augmented-ui="
+                tl-clip-x tr-clip-x br-clip-y bl-clip-y both">
+                    <model-viewer class=" w-full h-[70vh;]"
+                        src="https://models.readyplayer.me/66478c4a515d91cf786f8157.glb" seamless-poster
+                        environment-image="neutral" shadow-intensity="1" autoplay ar
+                        ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate
+                        interaction-prompt-threshold="1500" camera-controls enable-pan></model-viewer>
+                </div>
             </div>
 
+
             <!-- Third Section -->
-            <div class="col-span-1 p-8">
+            <div class="col-span-3 lg:col-span-1 p-8">
                 <h2 class="main-aug text-end text-[--primary-cyan] text-xl mb-4 px-10 py-2.5" data-augmented-ui="
                     tl-2-clip-x br-clip border">
                     Contact Information
@@ -130,6 +153,31 @@
         </div>
     </footer>
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".btn");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Remove .active and .text-white classes from all buttons
+                    buttons.forEach(btn => btn.classList.remove("active",
+                        "text-cyan-400",
+                        "border",
+                        "border-cyan-400",
+                        "bg-cyan-400",
+                        "bg-opacity-10"));
+
+                    this.classList.add("active",
+                        "text-cyan-400",
+                        "border",
+                        "border-cyan-400",
+                        "bg-cyan-400",
+                        "bg-opacity-10");
+                });
+            });
+        });
+    </script>
 
     <script src="about-me-script.js"></script>
     <script src="script.js"></script>
