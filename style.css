@@ -1,0 +1,154 @@
+:root {
+    --primary-font: 'Rajdhani', sans-serif;
+    --secondary-font: 'Advent Pro', sans-serif;
+    --primary-yellow: #FED33F;
+    --primary-red: #E8615A;
+    --primary-cyan: #2BE4EA;
+}
+
+
+body {
+    font-family: var(--primary-font);
+    position: relative;
+    background-image: url('cyberpunk.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    backdrop-filter: blur(7px);
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #441618;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+main .main-aug {
+    --aug-border-bg: var(--primary-red);
+    --aug-border-all: 1px;
+}
+
+main .section-1-aug {
+    --aug-border-bg: var(--primary-red);
+    --aug-border-all: 1px;
+}
+
+main .section-1-aug:hover {
+    --aug-border-bg: var(--primary-cyan);
+}
+
+main .section-1-aug:focus {
+    --aug-border-bg: var(--primary-cyan);
+}
+
+main .code-container {
+    position: relative;
+    color: white;
+    --aug-tl: 1rem;
+    --aug-border-all: 1px;
+    --aug-border-bg: var(--primary-yellow);
+    --aug-inlay-all: 0.5rem;
+    --aug-inlay-bg: #1E1E1C;
+    --aug-tr: 0.5rem;
+    --aug-tr-inset1: 15%;
+    --aug-br: 0.5rem;
+    --aug-br-extend1: 55%;
+    --aug-br-extend2: 55%;
+}
+
+main .cmd-content {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: 2px;
+}
+
+
+
+/* .section-1 code,
+.section-1 code span {
+    font-family: monospace;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.section-1 code {
+    display: block;
+    margin: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow: hidden;
+}
+
+code {
+    font-family: monospace;
+}
+
+main .code-type-label {
+    display: block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    padding: 0.125rem;
+    padding-left: 0.25rem;
+    background: black;
+    color: white;
+    font-weight: bold;
+    opacity: 0.66;
+    border-top-left-radius: 0.25rem;
+    --aug-clip-br1: initial;
+    --aug-br1: 1rem;
+} */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Example background color */
+    color: white;
+    /* Example text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.blinker {
+    opacity: 1;
+    margin-bottom: -2px;
+    height: 15px;
+    padding-left: -5px;
+    border-left: 7px solid #2BE4EA;
+    animation: blinker 0.9s steps(2, start) infinite;
+}
+
+@keyframes blinker {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+
+/* Scrollbar */
+
+*::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-yellow);
+    border: 1px solid var(--primary-cyan);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-yellow);
+}
