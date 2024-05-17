@@ -2,7 +2,7 @@ const data = [
     {
         education: `
             <p class="text-cyan-400 font-bold">searching database. </p>
-            <p class="text-cyan-400 font-bold">preparing for knowledge injection.  </p>
+            <p class="text-cyan-400 font-bold">preparing for education information rendering. </p>
             <p class="text-green-500 font-bold">ready for access. </p>
             >> database\\U2FsdGVkX19/+CTHVXZa+qkPvgMB9GgZ\\Education: <br>&nbsp[<br> 
             &nbsp&nbsp--nursery-school: Baguio Cathedral Nursery School; <br> 
@@ -10,31 +10,42 @@ const data = [
             &nbsp&nbsp--high-school: Saint Louis School (Center), HD; <br> 
             &nbsp&nbsp--senior-high-school: Saint Louis School (Center), HD; <br> 
             &nbsp&nbsp--college-br: University of Cordilleras, Inc.<br> 
-            <p class="text-yellow-500 text-center font-bold">Data compilation successful.</p> ]`
+            &nbsp&nbsp--course:<br>
+            <p class="text-[--primary-yellow] text-center font-bold">Bachelor of Science in</p>
+            <p class="text-[--primary-yellow] text-center font-bold">Information Technology</p>
+            <p class="text-[--primary-yellow] text-center font-bold">Web Technologies Track</p><br> 
+            <p class="text-green-600 text-center font-bold">Data compilation successful.</p> ]`
     },
     {
-        experience: `C:\\User\\U2FsdGVkX19/+CTHVXZa+qkPvgMB9GgZ\\Experience: <br>&nbsp[<br> 
-            &nbsp&nbsp--nursery-school: Baguio Cathedral Nursery School; <br> 
-            &nbsp&nbsp--elementary: Saint Louis School (Center), ED; <br> 
-            &nbsp&nbsp--high-school: Saint Louis School (Center), HD; <br> 
-            &nbsp&nbsp--senior-high-school: Saint Louis School (Center), HD; <br> 
-            &nbsp&nbsp--college-br: University of Cordilleras, Inc.<br> 
-            <p class="text-yellow-500 text-center font-bold">RENDERING COMPLETE!</p>]`
+        experience: `
+            <p class="text-cyan-400 font-bold">searching database. </p>
+            <p class="text-cyan-400 font-bold">preparing for experience information rendering.</p>
+            <p class="text-green-500 font-bold">ready for access. </p>
+            >> database\\U2FsdGVkX19/+CTHVXZa+qkPvgMB9GgZ\\Experience: <br>&nbsp[<br> 
+            <p class="text-red-500 font-bold">&nbsp&nbspERROR: Not applicable yet!</p><br> 
+            <p class="text-green-600 text-center font-bold">Data compilation successful.</p> ]`
     },
     {
-        skills: `C:\\User\\Theodore\\Skills: [<br> 
+        skills: `
+            <p class="text-cyan-400 font-bold">searching database. </p>
+            <p class="text-cyan-400 font-bold">preparing for skill information rendering. </p>
+            <p class="text-green-500 font-bold">ready for access. </p>
+            >> database\\U2FsdGVkX19/+CTHVXZa+qkPvgMB9GgZ\\Skills: [<br> 
             --programming-languages: JavaScript, PHP, HTML, CSS, SAP ABAP<br> 
             --frameworks-Libraries: Laravel, Node.js<br> 
             --databases: MySQL, SQLite<br> 
             --tools: Git, Visual Studio Code, Github, Composer<br> 
             --soft-skills: Problem-solving, Critical Thinking, Communication<br> 
-            <p class="text-yellow-500 text-center font-bold">RENDERING COMPLETE!</p>]`
+            <p class="text-green-600 text-center font-bold">Data compilation successful.</p> ]`
     },
     {
-        projects: `C:\\User\\Theodore\\Projects: [<br> 
-            --personal-portfolio Website<br> 
-            --socio-economic-profile-of-benguet<br>
-            <p class="text-yellow-500 text-center font-bold">RENDERING COMPLETE!</p> ]`
+        projects: `>> database\\U2FsdGVkX19/+CTHVXZa+qkPvgMB9GgZ\\Projects: [<br> 
+            <p class="text-cyan-400 font-bold">searching database. </p>
+            <p class="text-cyan-400 font-bold">preparing for project information rendering. </p>
+            <p class="text-green-500 font-bold">ready for access. </p>
+            1. Personal Portfolio Website<br> 
+            2. Socio Economic Profile of Benguet<br>
+            <p class="text-green-600 text-center font-bold">Data compilation successful.</p> ]`
     }
 ];
 
