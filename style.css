@@ -4,6 +4,8 @@
     --primary-yellow: #FED33F;
     --primary-red: #E8615A;
     --primary-cyan: #2BE4EA;
+
+    --secondary-yellow: #E9ED32;
 }
 
 
@@ -16,8 +18,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     backdrop-filter: blur(7px);
-    min-height: 100vh; 
-    margin: 0; 
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    z-index: -1;
 }
 
 body::before {
@@ -48,9 +53,6 @@ main .section-1-aug:hover {
     --aug-border-bg: var(--primary-cyan);
 }
 
-main .section-1-aug:focus {
-    --aug-border-bg: var(--primary-cyan);
-}
 
 main .code-container {
     position: relative;
@@ -90,6 +92,16 @@ main .btn.active {
 }
 
 
+main .clear-btn {
+    --aug-border-bg: var(--secondary-yellow);
+    --aug-border-all: 1px;
+}
+
+main .clear-btn:hover {
+    --aug-border-bg: var(--primary-cyan);
+}
+
+
 /* .section-1 code,
 .section-1 code span {
     font-family: monospace;
@@ -125,6 +137,59 @@ main .code-type-label {
     --aug-clip-br1: initial;
     --aug-br1: 1rem;
 } */
+
+aside.cyberpunk {
+    --width: 230px;
+    position: fixed;
+    top: 50%;
+    left: calc(100% - 55px);
+    width: var(--width);
+    transition: left 0.3s;
+}
+
+aside.cyberpunk:hover {
+    left: calc(100% - var(--width) + 5px);
+}
+
+aside.cyberpunk ul {
+    padding: 0;
+    margin: 0;
+}
+
+aside.cyberpunk ul li {
+    display: block;
+    background-color: var(--secondary-yellow);
+    border: 1px solid #000;
+    border-left: 10px solid #000;
+    border-bottom: 10px solid #000;
+    border-right: none;
+    font-size: 1.3rem;
+    margin: 3px 0px;
+    transform: skew(-15deg);
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 40% calc(100% - 9px), 0% 100%, 1% 62%);
+}
+
+aside.cyberpunk ul li:hover {
+    background-color: #000;
+}
+
+aside.cyberpunk ul li a {
+    display: block;
+    padding: 5px 10px;
+    color: #000;
+    transform: skew(15deg);
+    transition: color 0.3s;
+}
+
+aside.cyberpunk ul li:hover a {
+    color: var(--secondary-yellow);
+}
+
+aside.cyberpunk a:after {
+    display: none;
+}
 
 .footer {
     position: fixed;
@@ -166,4 +231,3 @@ main .code-type-label {
 *::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-yellow);
 }
-

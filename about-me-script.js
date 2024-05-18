@@ -51,9 +51,11 @@ const data = [
 
 const allElements = document.getElementsByClassName("typeing");
 const element = document.getElementById("AboutDevTypeText");
+const clearButton = document.querySelector('.clear-btn');
 
 let currentContent = ">>> start by pressing any of the buttons...";
 let i = 0, isTag, text;
+let isTerminalEmpty = false;
 
 (function type() {
     if (i === currentContent.length) {
@@ -76,6 +78,17 @@ let i = 0, isTag, text;
     setTimeout(type, 10);
 })();
 
+function clearTerminal() {
+    if (!isTerminalEmpty) {
+        element.innerHTML = '>>> start by pressing any of the buttons...';
+        currentContent = '>>> start by pressing any of the buttons...';
+        i = 0;
+        isTerminalEmpty = true;
+    }
+}
+
+clearButton.addEventListener('click', clearTerminal);
+
 document.querySelectorAll(".btn").forEach((button, index) => {
     button.addEventListener("click", function () {
         const section = this.dataset.section;
@@ -84,6 +97,7 @@ document.querySelectorAll(".btn").forEach((button, index) => {
         currentContent = content;
         i = 0;
         element.innerHTML = "";
+        isTerminalEmpty = false;
 
         (function type() {
             if (i === currentContent.length) {
