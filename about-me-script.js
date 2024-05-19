@@ -92,32 +92,36 @@ clearButton.addEventListener('click', clearTerminal);
 document.querySelectorAll(".btn").forEach((button, index) => {
     button.addEventListener("click", function () {
         const section = this.dataset.section;
-        const content = data[index][section] || "";
 
-        currentContent = content;
-        i = 0;
-        element.innerHTML = "";
-        isTerminalEmpty = false;
+        // Ensure section and index are defined and exist in data array
+        if (section && data[index] && data[index][section]) {
+            const content = data[index][section];
 
-        (function type() {
-            if (i === currentContent.length) {
-                return;
-            }
+            currentContent = content;
+            i = 0;
+            element.innerHTML = "";
+            isTerminalEmpty = false;
 
-            text = currentContent.slice(0, i) + (i === currentContent.length - 1 ? currentContent.charAt(i) : '');
-            element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+            (function type() {
+                if (i === currentContent.length) {
+                    return;
+                }
 
-            const char = text.slice(-1);
-            if (char === "<") isTag = true;
-            if (char === ">") isTag = false;
+                text = currentContent.slice(0, i) + (i === currentContent.length - 1 ? currentContent.charAt(i) : '');
+                element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
 
-            if (isTag) {
+                const char = text.slice(-1);
+                if (char === "<") isTag = true;
+                if (char === ">") isTag = false;
+
+                if (isTag) {
+                    i++;
+                    return type();
+                }
+
                 i++;
-                return type();
-            }
-
-            i++;
-            setTimeout(type, 10);
-        })();
+                setTimeout(type, 10);
+            })();
+        }
     });
 });
